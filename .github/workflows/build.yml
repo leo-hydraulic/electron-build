@@ -21,3 +21,11 @@ jobs:
           path: ./build/src/electron
           ref: v23.0.0-hydraulic
           
+      - name: Sync
+        run: e sync
+       
+      - name: Build
+        run: e build
+
+      - name: List results
+        run: ls ./build/src/out
