@@ -8,5 +8,16 @@ jobs:
         with:
           node-version: 18
           
-      - name: Test
-        run: echo testing
+      - name: Install Electron build tools
+        run: npm i -g @electron/build-tools
+        
+      - name: Config
+        run: e init release -i release -r ./build --fork leo-hydraulic/electron
+        
+      - name: Checkout
+        uses: actions/checkout@v3
+        with: 
+          repository: leo-hydraulic/electron
+          path: ./build/src/electron
+          ref: v23.0.0-hydraulic
+          
