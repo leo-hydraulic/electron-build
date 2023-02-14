@@ -20,6 +20,7 @@ jobs:
           repository: leo-hydraulic/electron
           path: ./build/src/electron
           ref: v23.0.0-hydraulic
+          fetch-depth: 0
           
       - name: Sync
         run: e sync
