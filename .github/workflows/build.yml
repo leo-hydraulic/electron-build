@@ -29,7 +29,7 @@ jobs:
         run: pushd ./build/src/electron; git pack-refs --all; popd
        
       - name: Build
-        run: e build -d explain -v
+        run: e build
 
       - name: List results
         run: ls ./build/src/out
