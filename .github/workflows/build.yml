@@ -24,6 +24,9 @@ jobs:
           
       - name: Sync
         run: e sync
+        
+      - name: Pack refs
+        run: pushd ./build/src/electron; git pack-refs --all; popd
        
       - name: Build
         run: e build -d explain -v
