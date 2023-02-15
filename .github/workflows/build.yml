@@ -13,6 +13,9 @@ jobs:
         
       - name: Config
         run: e init release -i release -r ./build --fork leo-hydraulic/electron
+          
+      - name: Sync
+        run: e sync
         
       - name: Checkout
         uses: actions/checkout@v3
@@ -22,7 +25,7 @@ jobs:
           ref: v23.0.0-hydraulic
           fetch-depth: 0
           
-      - name: Sync
+      - name: Sync again
         run: e sync
        
       - name: Build
